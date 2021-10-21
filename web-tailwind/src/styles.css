@@ -28,30 +28,67 @@
         font-style: normal;
     }
 
-    .symbol {
+    .font-symbol {
         font-family: "WebSymbolsRegular";
     }
 
-    .bebas {
+    .font-bebas {
         font-family: "BebasNeue";
     }
 
-    .trebuchet {
+    .font-trebuchet {
         font-family: "TrebuchetMS";
     }
 }
 
 @layer components {
+    /* Estilos Menu */
+
     .menu-item {
         @apply 
-            mx-5 
             tracking-wider 
             flex-1
+            md:mx-5
             md:flex-none
         ;
     }
 
     .menu-item-a {
-        @apply block transition duration-200 hover:text-blue-light transform  hover:scale-125
+        @apply block transition duration-200 hover:text-blue-light transform  hover:scale-125;
     }
+
+    /* Estilos banner */
+
+    .text-banner {
+        font-family: "BebasNeue";
+        text-shadow: 2px 2px 1px black;
+    }
+
+    /* Estilos card */
+
+    .card {
+        @apply 
+            flex-1
+            h-80
+            border-2
+            border-gray-200
+            shadow-md
+            bg-white
+            overflow-hidden
+            m-5
+            px-5
+            mt-10
+            cursor-pointer
+            transition
+            duration-300
+        ;
+    }
+
+    .card-item {
+        @apply
+            block
+            w-full
+        ;
+    }
+
 }

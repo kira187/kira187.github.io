@@ -10,11 +10,11 @@
   	<body class="bg-body-pattern bg-scroll">
     	
 		<!-- Header -->
-		<header id="header" class="h-36 md:h-20 bg-black text-white bebas">
+		<header id="header" class="h-36 md:h-20 bg-black text-white font-bebas">
 			<div class="container mx-auto flex flex-col md:flex-row">
-				<div id="logo" class="flex-1">
-					<div class="group mt-4 ml-6 w-64 py-0.5 text-center tracking-wider cursor-pointer overflow-hidden transition duration-300 rounded-sm bg-blue-light hover:text-black hover:bg-gray-200">
-						<span class="symbol block float-left text-3xl my-1 ml-11 animate-spin-low group-hover:animate-none group-hover:animate-from-bellow"> S </span>
+				<div id="logo" class="flex-1 mx-auto">
+					<div class="group mt-4 w-64 py-0.5 text-center tracking-wider cursor-pointer overflow-hidden transition duration-300 rounded-sm bg-blue-light hover:text-black hover:bg-gray-200">
+						<span class="font-symbol block float-left text-3xl my-1 ml-11 animate-spin-low group-hover:animate-none group-hover:animate-from-bellow"> S </span>
 						<h3 class="block float-right text-4xl  mt-1.5 mr-16 transition duration-100 group-hover:animate-from-right ">Tailwind</h3>
 					</div>
 				</div>
@@ -31,5 +31,43 @@
 		</header>
     	<!-- Header End -->
 
+		<!-- Section Information -->
+		<section class="container mx-auto">
+			<!-- Banner -->
+			<div id="banner" class="h-28 w-full border-8 border-white mx-auto overflow-hidden bg-banner m-5 shadow bg-banner-position animate-bg-banner">
+				<h1 class="text-banner block text-white text-2xl md:text-4xl font-normal tracking-wider m-8 mx-auto text-center animate-text-banner"> Curso de desarrollo web</h1>
+			</div>
+		</section>
+		<!-- Section End -->
+
+		<!-- Start Cards -->
+		<div id="cards" class="flex flex-nowrap justify-between">
+			<div class="card">
+				<span class="card-icon font-symbol">H</span>
+				<h2 class="card-category">Desarrollo Web</h2>
+				<p class="card-description">Aprende los principales lenguajes de desarrollo web</p>
+			</div>
+			<div class="card">
+				<span class="card-icon font-symbol">_</span>
+				<h2 class="card-category">Sistemas Operativos</h2>
+				<p class="card-description">Aprende a administrar sistemas operativos</p>
+			</div>
+			<div class="card">
+				<span class="card-icon font-symbol">S</span>
+				<h2 class="card-category">HardWare</h2>
+				<p class="card-description">Aprende todo acerca del hardware</p>
+			</div>
+			<div class="card">
+				<span class="card-icon font-symbol">u</span>
+				<h2 class="card-category">Redes e internet</h2>
+				<p class="card-description">Configura y administra redes y servidores</p>
+			</div>
+			<div class="card">
+				<span class="card-icon font-symbol">a</span>
+				<h2 class="card-category">Bases de datos</h2>
+				<p class="card-description">Aprende a trabajar con base de datos</p>
+			</div>
+		</div>
+		<!-- End Cards -->
   	</body>
 </html>
