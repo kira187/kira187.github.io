@@ -1,0 +1,260 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face{
+        font-family: "TrebuchetMS";
+        src: url('fonts/TrebuchetMS.ttf');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face{
+        font-family: "BebasNeue";
+        src: url('fonts/BebasNeue.otf');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face{
+        font-family: "WebSymbolsRegular";
+        src: url('fonts/websymbols-regular-webfont.eot');
+        src: url('fonts/websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'),
+             url('fonts/websymbols-regular-webfont.woff') format('woff'),
+             url('fonts/websymbols-regular-webfont.ttf') format('truetype'),
+             url('fonts/websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    .font-symbol {
+        font-family: "WebSymbolsRegular";
+    }
+
+    .font-bebas {
+        font-family: "BebasNeue";
+    }
+
+    .font-trebuchet {
+        font-family: "TrebuchetMS";
+    }
+}
+
+@layer components {
+    /* Estilos Menu */
+
+    .menu-item {
+        @apply 
+            tracking-wider 
+            flex-1
+            md:mx-5
+            md:flex-none
+        ;
+    }
+
+    .menu-item-a {
+        @apply block transition duration-200 hover:text-blue-light transform  hover:scale-125;
+    }
+
+    /* Estilos banner */
+
+    .text-banner {
+        font-family: "BebasNeue";
+        text-shadow: 2px 2px 1px black;
+    }
+
+    /* Estilos card */
+
+    .card {
+        @apply
+            flex-1
+            h-40
+            border-2
+            border-gray-200
+            shadow-md
+            bg-white
+            overflow-hidden
+            m-2
+            px-5
+            mt-10
+            cursor-pointer
+            transition
+            duration-300
+            hover:bg-black
+
+            lg:h-80
+            lg:m-5
+        ;
+    }
+
+    .card-icon {
+        @apply
+            block
+            w-full
+            h-20
+            text-5xl
+            text-center
+            mt-3
+            mx-auto
+            transition
+            duration-300
+            transform
+            group-hover:scale-125
+            group-hover:text-blue-light
+            group-hover:animate-show-card-icon
+            group-hover:pt-5
+
+            md:group-hover:scale-150
+            lg:mt-12
+            lg:h-32
+        ;
+    }
+
+    .card-category {
+        @apply
+            w-full
+            h-6
+            text-sm
+            font-bold
+            text-center
+            text-blue-dark
+            transition
+            duration-300
+            group-hover:text-white
+            group-hover:animate-show-card-category
+            group-hover:pt-2
+
+            md:group-hover:pt-0
+            md:text-base
+            lg:text-lg
+            lg:h-12
+        ;
+    }
+
+    .card-description {
+        font-family: "TrebuchetMS";
+        @apply
+            hidden
+            text-center
+            text-blue-dark
+            text-base
+            transition
+            duration-300
+            group-hover:text-white
+            group-hover:animate-show-card-description
+            
+            lg:block
+            lg:text-sm
+            lg:mt-1.5
+            xl:text-base
+            xl:mt-1
+        ;
+    }
+
+    .articles-header {
+        background: url('../img/pxgray.png'), white;
+        @apply 
+            font-bebas 
+            w-full
+            h-20
+            block
+            text-4xl
+            text-center 
+            font-medium
+            tracking-widest
+            pt-5
+            border
+            shadow-header3D
+            ;
+    }
+
+    .article-item {
+        @apply w-full bg-white h-auto border-gray-200 m-10 mx-auto p-2.5 text-black shadow-md;
+    }
+
+    .article-data {
+        @apply float-right bg-gray-800 h-10 text-white leading-7 p-2 -m-2.5 text-sm rounded-bl-lg;
+    }
+
+    .artcle-data span {
+        @apply m-2.5;
+    }
+
+    .article-head {
+        @apply block text-2xl m-1;
+    }
+
+    .article-head a {
+        @apply font-semibold text-blue-dark hover:underline;
+    }
+
+    .article-description {
+        @apply block my-3 text-base font-sans font-normal;
+    }
+
+    .aside-header {
+        background: url('../img/pxgray.png'), white;
+        @apply font-bebas block h-11 leading-10 shadow-header3D text-3xl font-medium tracking-widest pl-3.5 pt-1 mb-3.5 border;
+    }
+
+    .aside-box {
+        @apply w-60 md:w-10/12 max-w-xs h-60 mx-auto mt-5 mb-7 pt-1 bg-white shadow-box;
+    }
+
+    .login-icon {
+        @apply font-symbol text-center absolute ml-7 mt-1 h-8;
+    }
+
+    .login-input {
+        @apply block mx-auto mt-5 w-10/12 h-8 border border-gray-300 shadow-inner pl-7 rounded-md text-gray-500 transition duration-300 outline-none 
+        focus:outline-none focus:text-gray-600;
+    }
+
+    .login-btn {
+        @apply w-24 h-8 my-5 ml-5 text-center text-white text-base font-trebuchet font-light border border-blue-dark rounded-none cursor-pointer
+        bg-gradient-to-b from-blue-light to-blue-dark transition duration-300 hover:shadow-md;
+    }
+
+    .login-link {
+        @apply block ml-4 text-sm text-gray-600 hover:underline hover:text-blue-dark;
+    }
+
+    .social-icon {
+        @apply font-symbol block text-gray-700 text-3xl mt-3 mb-5 ml-5;
+    }
+    
+    .social-overlay{
+        @apply cursor-pointer block absolute h-10 px-2 pt-1 ml-16 -mt-14 font-sans tracking-wide font-bold shadow-md border-4 border-white opacity-0 bg-gray-100 
+		text-gray-700 transition duration-300 transform -translate-x-3/4;
+    }
+
+    .footer-box {
+        @apply flex-1 w-11/12 lg:w-80 mx-auto mt-3 lg:m-10 h-96 text-center text-white font-trebuchet;
+    }
+
+    .footer-header {
+        background: url('../img/pxgray.png'), white;
+        @apply font-bebas tracking-wide text-center text-4xl text-black rounded-md p-1.5 mb-4 pt-2;
+    }
+
+    .footer-menu {
+        @apply text-left m-5 text-2xl;
+    }
+
+    .footer-menu li {
+        @apply mt-3 p-1 border-b-2 border-gray-400 transition duration-300;
+    }
+
+    .footer-menu li a {
+        @apply block h-10 transition duration-300 text-blue-light hover:text-white;
+    }
+
+    .footer-browsers a {
+        @apply flex-1 mb-1.5;
+    }
+
+    .footer-browsers a img {
+        @apply w-11;
+    }
+}
