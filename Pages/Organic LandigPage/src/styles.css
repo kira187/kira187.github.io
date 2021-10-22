@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face{
+        font-family: "DM Sans";
+        src: url('fonts/DMSans-Regular.ttf');
+        font-weight: normal;
+        font-style: normal;
+    }
+}
+
+@layer components {
+    .font-dm-sans {
+        font-family: "DM Sans";
+    }
+
+    .item-menu {
+        @apply text-xl font-medium;
+    }
+}
