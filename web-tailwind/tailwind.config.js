@@ -6,6 +6,9 @@ module.exports = {
 			screens: {
 				'xs': {'max': '768px'}
 			},
+			boxShadow: {
+				header3D: "0px 1px 0px #393d3f, 1px 2px 0px #393d3f, 2px 3px 0px #393d3f, 3px 4px 0px #393d3f"
+			},
 			backgroundImage: {
 				'body-pattern': "url('../img/pattern.png')",
 				'banner': "url('../img/bakbaner.png')",
@@ -26,6 +29,9 @@ module.exports = {
 				'from-right': 'fromRight 300ms linear',
 				'bg-banner': 'backBanner 10s linear',
 				'text-banner': 'showBannerText 10s linear',
+				'show-card-icon': 'showCardIcon 300ms linear',
+				'show-card-category': 'showCardCategory 400ms linear',
+				'show-card-description': 'showCardDescription 400ms linear',
 			},
 			keyframes: {
 				fromBellow:{
@@ -63,12 +69,39 @@ module.exports = {
 						opacity: 0
 					},
 				},
+				showCardIcon: {
+					'from': {
+						'transform': 'translateY(-200%)'
+					},
+					'to': {
+						'transform': 'translateY(0%)'
+					},
+				},
+				showCardCategory: {
+					'from': {
+						'transform': 'translateY(-300%)'
+					},
+					'to': {
+						'transform': 'translateY(0%)'
+					},
+				},
+				showCardDescription: {
+					'from': {
+						'transform': 'translateX(-300%)'
+					},
+					'to': {
+						'transform': 'translateX(0%)'
+					},
+				},
 			},
 		},
   	},
   	variants: {
 		animation: ['responsive', 'hover','group-hover'],
         animate: ['responsive', 'hover', 'group-hover'],
+		fontSize: ['responsive', 'hover', 'group-hover'],
+		scale: ['responsive', 'hover', 'group-hover'],
+		padding: ['responsive', 'hover', 'group-hover'],
   	},
   	plugins: [],
 }

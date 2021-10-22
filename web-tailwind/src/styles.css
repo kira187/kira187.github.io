@@ -67,28 +67,135 @@
     /* Estilos card */
 
     .card {
-        @apply 
+        @apply
             flex-1
-            h-80
+            h-40
             border-2
             border-gray-200
             shadow-md
             bg-white
             overflow-hidden
-            m-5
+            m-2
             px-5
             mt-10
             cursor-pointer
             transition
             duration-300
+            hover:bg-black
+
+            lg:h-80
+            lg:m-5
         ;
     }
 
-    .card-item {
+    .card-icon {
         @apply
             block
             w-full
+            h-20
+            text-5xl
+            text-center
+            mt-3
+            mx-auto
+            transition
+            duration-300
+            transform
+            group-hover:scale-125
+            group-hover:text-blue-light
+            group-hover:animate-show-card-icon
+            group-hover:pt-5
+
+            md:group-hover:scale-150
+            lg:mt-12
+            lg:h-32
         ;
+    }
+
+    .card-category {
+        @apply
+            w-full
+            h-6
+            text-sm
+            font-bold
+            text-center
+            text-blue-dark
+            transition
+            duration-300
+            group-hover:text-white
+            group-hover:animate-show-card-category
+            group-hover:pt-2
+
+            md:group-hover:pt-0
+            md:text-base
+            lg:text-lg
+            lg:h-12
+        ;
+    }
+
+    .card-description {
+        font-family: "TrebuchetMS";
+        @apply
+            hidden
+            text-center
+            text-blue-dark
+            text-base
+            transition
+            duration-300
+            group-hover:text-white
+            group-hover:animate-show-card-description
+            
+            lg:block
+            lg:text-sm
+            lg:mt-1.5
+            xl:text-base
+            xl:mt-1
+        ;
+    }
+
+    .articles-header {
+        background: url('../img/pxgray.png'), white;
+        @apply 
+            font-bebas 
+            w-full
+            h-20
+            block
+            text-4xl
+            text-center 
+            font-medium
+            tracking-widest
+            pt-5
+            border
+            shadow-header3D
+            ;
+    }
+
+    .article-item {
+        @apply w-full bg-white h-auto border-gray-200 m-10 mx-auto p-2.5 text-black shadow-md;
+    }
+
+    .article-data {
+        @apply float-right bg-gray-800 h-10 text-white leading-7 p-2 -m-2.5 text-sm rounded-bl-lg;
+    }
+
+    .artcle-data span {
+        @apply m-2.5;
+    }
+
+    .article-head {
+        @apply block text-2xl m-1;
+    }
+
+    .article-head a {
+        @apply font-semibold text-blue-dark hover:underline;
+    }
+
+    .article-description {
+        @apply block my-3 text-base font-sans font-normal;
+    }
+
+    .aside-header {
+        background: url('../img/pxgray.png'), white;
+        @apply font-bebas block h-11 leading-10 shadow-header3D text-3xl font-medium tracking-widest pl-3.5 pt-1 mb-3.5 border;
     }
 
 }
