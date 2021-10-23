@@ -2,21 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-    @font-face{
-        font-family: "DM Sans";
-        src: url('fonts/DMSans-Regular.ttf');
-        font-weight: normal;
-        font-style: normal;
-    }
-}
+
 
 @layer components {
-    .font-dm-sans {
-        font-family: "DM Sans";
+    .item-menu {
+        @apply text-lg font-semibold;
     }
 
-    .item-menu {
-        @apply text-xl font-medium;
+    .item-bar {
+        @apply h-0.5 bg-green transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left rounded-full duration-300 ease-out;
+    }
+
+    .btn-primary {
+        @apply flex justify-center items-center h-13 px-8 font-semibold bg-green text-white rounded-xl hover:shadow-primary transition-shadow duration-300;
+    }
+
+    .btn-secondary {
+        @apply flex justify-center items-center h-13 px-8 font-semibold text-gray-900 border border-gray-900 rounded-xl hover:shadow-xl transition-shadow duration-300;
     }
 }
