@@ -1,109 +1,55 @@
 module.exports = {
-  	purge: [],
-  	darkMode: false,
-  	theme: {
-    	extend: {
-			screens: {
-				'xs': {'max': '768px'}
-			},
-			boxShadow: {
-				header3D: "0px 1px 0px #393d3f, 1px 2px 0px #393d3f, 2px 3px 0px #393d3f, 3px 4px 0px #393d3f",
-				box: "0px 0px 1px rgba(0, 0, 0, 0.3), 0px 3px 7px rgba(0, 0, 0, 0.3), 0px 1px 0px white inset, 0px -3px 1px rgba(0, 0, 0, 0.3) inset"
-			},
-			backgroundImage: {
-				'body-pattern': "url('../img/pattern.png')",
-				'banner': "url('../img/bakbaner.png')",
-			},
-			backgroundPosition: {
-				'banner-position' : "-300px -200px",
-			},
-			colors: {
-				primary: '#fffff',
-				blue: {
-					light: '#37bcf9',
-				  	dark: '#0370b9',
-				}
-			},
-			animation: {
-				'spin-low': 'spin 2s linear infinite',
-				'from-bellow': 'fromBellow 500ms linear',
-				'from-right': 'fromRight 300ms linear',
-				'bg-banner': 'backBanner 10s linear',
-				'text-banner': 'showBannerText 10s linear',
-				'show-card-icon': 'showCardIcon 300ms linear',
-				'show-card-category': 'showCardCategory 400ms linear',
-				'show-card-description': 'showCardDescription 400ms linear',
-			},
-			keyframes: {
-				fromBellow:{
-					'0%': { transform: 'translateY(0%)'},
-					'50%': { transform: 'translateY(200%)'},
-					'100%': { transform: 'translateY(0%)'}
-				},
-				fromRight:{
-					'0%': { transform: 'translateX(200%)'},
-					'100%': { transform: 'translateX(0%)'}
-				},
-				backBanner:{
-					'0%': { 'background-position': '0px 0px'},
-					'100%': { 'background-position': '-300px -200px'}
-				},
-				showBannerText:{
-					'0%': { 
-						transform: 'translateX(-600%) scale(5,5)',
-						opacity: 1
-					},
-					'50%': { 
-						transform: 'translateX(600%) scale(5,5)',
-						opacity: 1
-					},
-					'75%': { 
-						transform: 'translateX(-600%) scale(5,5)',
-						'text-shadow': 'none',
-						color: 'transparent',
-						opacity: 0
-					},
-					'100%': { 
-						transform: 'translateX(0%) scale(1,1)',
-						'text-shadow': '2px 2px 1px black',
-						color: 'white',
-						opacity: 0
-					},
-				},
-				showCardIcon: {
-					'from': {
-						'transform': 'translateY(-200%)'
-					},
-					'to': {
-						'transform': 'translateY(0%)'
-					},
-				},
-				showCardCategory: {
-					'from': {
-						'transform': 'translateY(-300%)'
-					},
-					'to': {
-						'transform': 'translateY(0%)'
-					},
-				},
-				showCardDescription: {
-					'from': {
-						'transform': 'translateX(-300%)'
-					},
-					'to': {
-						'transform': 'translateX(0%)'
-					},
-				},
-			},
-		},
-  	},
-  	variants: {
-		animation: ['responsive', 'hover','group-hover'],
-        animate: ['responsive', 'hover', 'group-hover'],
-		fontSize: ['responsive', 'hover', 'group-hover'],
-		scale: ['responsive', 'hover', 'group-hover'],
-		padding: ['responsive', 'hover', 'group-hover'],
-		translate: ['active', 'group-hover'],
-  	},
-  	plugins: [],
+  darkMode: 'class',
+  content: ["./src/**/*.{html,js}"],
+  theme: {
+    screens:{
+      sm: '576px',
+      md: '768px',
+      lg: '992px',
+      xl: '1200px',
+    },
+    container: {
+      center: true,
+      padding: '1rem',
+    },
+    extend: {
+      fontFamily:{
+        poppins: "'Poppins', sans-serif",
+      },
+      zIndex: {
+        '100': '100',
+        '1000': '1000',
+      },
+      transitionDuration: {
+        '400': '400ms',
+      },
+      fontSize: {
+        '3xl': '1.75rem',
+        'sm': '.875rem',
+        'xs': '.625rem',
+      },
+      borderRadius: {
+        '8xl': '4rem',
+        '10xl': '5rem',
+      },
+      colors:{
+        'first-color': 'hsl(220, 66%, 55%)',
+        'first-color-alt': 'hsl(220, 66%, 60%)',
+        'title-color': 'hsl(219, 15%, 15%)',
+        'text-color': 'hsl(219, 8%, 35%)',
+        'text-color-light': 'hsl(219, 4%, 55%)',
+        'body-color': 'hsl(219, 100%, 99%)',
+        'container-color': '#fff',
+        'title-color-dark': 'hsl(219, 15%, 95%)',
+        'text-color-dark': 'hsl(219, 8%, 75%)',
+        'body-color-dark': 'hsl(219, 48%, 8%)',
+        'container-color-dark': 'hsl(219, 32%, 12%)',
+        'nav-color': 'hsla(219, 32%, 16%, .8)',
+        'light-nav-color': 'hsla(219, 32%, 90%, .8)',
+      },
+    },
+  },
+  plugins: [
+    require('flowbite/plugin')
+  ]
 }
