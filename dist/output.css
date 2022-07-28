@@ -771,7 +771,7 @@ img{
 
 .nav_menu{
   position: fixed;
-  bottom: 1rem;
+  bottom: 3rem;
   width: 90%;
   border-radius: 4rem;
   background-color: hsla(219, 32%, 90%, .8);
@@ -786,6 +786,12 @@ img{
 
 .dark .nav_menu{
   background-color: hsla(219, 32%, 16%, .8);
+}
+
+@media (min-width: 576px){
+  .nav_menu{
+    bottom: 1rem;
+  }
 }
 
 @media (min-width: 768px){
@@ -876,7 +882,7 @@ img{
 
 .home_handle{
   display: flex;
-  height: 253px;
+  height: 200px;
   width: 150px;
   align-items: flex-end;
   justify-content: center;
@@ -890,8 +896,8 @@ img{
 
 @media (min-width: 768px){
   .home_handle{
-    height: 293px;
-    width: 190px;
+    height: 250px;
+    width: 170px;
   }
 }
 
@@ -2006,10 +2012,6 @@ body.light-theme{
 
   .md\:col-start-1{
     grid-column-start: 1;
-  }
-
-  .md\:grid-cols-3{
-    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .md\:justify-end{
