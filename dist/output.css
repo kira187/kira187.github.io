@@ -771,7 +771,7 @@ img{
 
 .nav_menu{
   position: fixed;
-  bottom: 3rem;
+  bottom: 2rem;
   width: 90%;
   border-radius: 4rem;
   background-color: hsla(219, 32%, 90%, .8);
@@ -788,16 +788,11 @@ img{
   background-color: hsla(219, 32%, 16%, .8);
 }
 
-@media (min-width: 576px){
-  .nav_menu{
-    bottom: 1rem;
-  }
-}
-
 @media (min-width: 768px){
   .nav_menu{
     left: 33.333333%;
     right: 33.333333%;
+    bottom: 1rem;
     width: 35%;
     padding-left: 2.25rem;
     padding-right: 2.25rem;
